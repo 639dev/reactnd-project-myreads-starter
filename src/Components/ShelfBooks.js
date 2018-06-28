@@ -6,14 +6,14 @@ import PropTypes from 'prop-types'
 function ShelfBooks(props) {
 	return (
 		<ol className="books-grid">
-            {props.books && (
-                props.books.map((book) => (
-                  <li key={book.id}>
-                    <Book book={book} onUpdate={props.onUpdate}/>
-                  </li>
-               ))
-            )}
-        </ol>
+        {props.books && (
+            props.books.map((book) => (
+              <li key={book.id}>
+                <Book book={book} onUpdate={props.onUpdate}/>
+              </li>
+           ))
+        )}
+    </ol>
 	);
 }
 

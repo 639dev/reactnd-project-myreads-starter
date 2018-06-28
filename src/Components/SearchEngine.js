@@ -22,7 +22,7 @@ class SearchEngine extends Component {
 	}
 
 	search = (query) => {
-		if(query) {
+		if(query != '') {
 	        BooksAPI.search(query).then(result => {
 	          this.checkAdded(result)
 	          this.setState({results: result})
