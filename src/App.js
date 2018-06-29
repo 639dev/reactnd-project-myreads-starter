@@ -24,7 +24,6 @@ class BooksApp extends React.Component {
       this.setState((currentState) => ({
           books: currentState.books.concat([book])
       }))
-      this.componentDidMount();
     })
    }
   render() {  
