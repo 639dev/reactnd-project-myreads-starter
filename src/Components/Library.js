@@ -3,18 +3,22 @@ import PropTypes from 'prop-types'
 import Shelf from './Shelf'
 
 function Library(props){
+    const shelves = [
+        ['Currently Reading', 'currentlyReading'],
+        ['Want to Read', 'wantToRead'],
+        ['Read', 'read']
+    ]
 	return(
 		<div className="list-books">
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
             <div className="list-books-content">
+            
             {props.books && (
-            	<div>
-                	<Shelf onUpdate={props.onUpdate} shelfName="Currently Reading" books={props.books.filter((book) => (book.shelf === 'currentlyReading'))}/>
-                	<Shelf onUpdate={props.onUpdate} shelfName="Want to Read" books={props.books.filter((book) => (book.shelf === 'wantToRead'))}/>
-                	<Shelf onUpdate={props.onUpdate} shelfName="Read" books={props.books.filter((book) => (book.shelf === 'read'))}/>
-              </div>
+            	shelves.map((shelf) => (
+                <Shelf key={shelf[0]} onUpdate={props.onUpdate} shelfName={shelf[0]} books={props.books.filter((book) => (book.shelf === shelf[1]))}/>
+            ))
             )}
             </div>
         </div>
