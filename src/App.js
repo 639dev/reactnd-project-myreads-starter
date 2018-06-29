@@ -24,7 +24,7 @@ class BooksApp extends React.Component {
       let updated = this.state.books.filter( currbook => currbook.id !== book.id )
       updated.push(book);
       this.setState({books:updated})
-      })
+    })
    }
   render() {  
     return (
