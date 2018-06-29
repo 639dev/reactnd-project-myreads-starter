@@ -27,7 +27,11 @@ class SearchEngine extends Component {
 	          this.checkAdded(result)
 	          this.setState({results: result})
 	     })
-	     .catch(() => alert('Error accured while fetching data, Please try again!'));
+	     .catch(() => this.setState({results:[]}));
+	    }
+	    else
+	    {
+	    	this.setState({results:[]})
 	    }
 	}
 	checkAdded = (result) => {

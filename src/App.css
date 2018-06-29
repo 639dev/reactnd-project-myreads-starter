@@ -172,3 +172,8 @@ body, .app {
   text-align: center;
   font-size: 0.8em;
 }
+
+.warn-txt {
+  font-size: 1.25em;
+  color: lightgray;
+}
