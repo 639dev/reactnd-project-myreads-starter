@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Shelf from './Shelf';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Shelf from './Shelf'
 
 function Library(props){
 	return(
@@ -28,4 +28,4 @@ Library.propTypes = {
 
 
 
-export default Library;
+export default Library

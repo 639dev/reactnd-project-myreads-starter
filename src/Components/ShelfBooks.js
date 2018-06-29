@@ -1,5 +1,5 @@
-import React from 'react';
-import Book from './Book';
+import React from 'react'
+import Book from './Book'
 import PropTypes from 'prop-types'
 
 
@@ -22,4 +22,4 @@ ShelfBooks.propTypes = {
   onUpdate: PropTypes.func.isRequired
 }
 
-export default ShelfBooks;
+export default ShelfBooks

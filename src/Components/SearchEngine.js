@@ -1,8 +1,8 @@
-import React,{Component} from 'react';
+import React,{Component} from 'react'
 import * as BooksAPI from '../BooksAPI'
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import ShelfBooks from './ShelfBooks'
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router-dom'
 
 
 class SearchEngine extends Component {
@@ -22,11 +22,12 @@ class SearchEngine extends Component {
 	}
 
 	search = (query) => {
-		if(query != '') {
+		if(query !== '') {
 	        BooksAPI.search(query).then(result => {
 	          this.checkAdded(result)
 	          this.setState({results: result})
 	     })
+	     .catch(() => alert('Error accured while fetching data, Please try again!'));
 	    }
 	}
 	checkAdded = (result) => {
